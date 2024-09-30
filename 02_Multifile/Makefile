@@ -29,7 +29,7 @@ test: all test_zero_args test_one_arg test_three_args clean_generates
 test_zero_args:
 	./prog   							> test_zero_1 2>&1
 	./prog-a 							> test_zero_2 2>&1
-	LD_LIBRARY_PATH=`pwd` 	./prog-so 	> test_zero_3 2>&1
+	LD_LIBRARY_PATH=`pwd` 	./prog-so 				> test_zero_3 2>&1
 
 	cmp test_zero_1 test_zero_2
 	cmp test_zero_1 test_zero_3
@@ -37,7 +37,7 @@ test_zero_args:
 test_one_arg:
 	./prog   							1 > test_one_1 2>&1
 	./prog-a 							1 > test_one_2 2>&1
-	LD_LIBRARY_PATH=`pwd` ./prog-so 	1 > test_one_3 2>&1
+	LD_LIBRARY_PATH=`pwd` ./prog-so 				1 > test_one_3 2>&1
 
 	cmp test_one_1 test_one_2
 	cmp test_one_1 test_one_3
@@ -45,7 +45,7 @@ test_one_arg:
 test_three_args:
 	./prog   							1 2 3	> test_three_1 2>&1
 	./prog-a 							1 2 3	> test_three_2 2>&1
-	LD_LIBRARY_PATH=`pwd` ./prog-so 	1 2 3 	> test_three_3 2>&1
+	LD_LIBRARY_PATH=`pwd` ./prog-so 				1 2 3 	> test_three_3 2>&1
 
 	cmp test_three_1 test_three_2
 	cmp test_three_1 test_three_3
