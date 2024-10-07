@@ -13,12 +13,14 @@ max_width=0
 
 while IFS= read -r line; do
     for ((i=0; i<${#line}; i++)); do
-        if [ "$max_width" -lt "$i" ]; then
-            max_width="$i"
+        if [[ ${line:i:1} != [[:space:]] ]]; then
+            if [ "$max_width" -lt "$i" ]; then
+                max_width="$i"
+            fi
+            ((j++))
+            positions+=("$lines_cnt $i")
+            chars[j]=${line:i:1}
         fi
-        ((j++))
-        positions+=("$lines_cnt $i")
-        chars[j]=${line:i:1}
     done
     ((lines_cnt++))
 done
