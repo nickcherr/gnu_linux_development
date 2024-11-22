@@ -1,23 +1,17 @@
---- labyrinth.c	2024-11-22 22:57:48.586746810 +0300
-+++ labyrinth-new.c	2024-11-22 23:12:33.826587823 +0300
-@@ -2,6 +2,7 @@
- #include <stdlib.h>
- #include <stdbool.h>
- #include <stdio.h>
-+#include <string.h>
- 
- #define LEFT 1
- #define RIGHT 2
-@@ -9,10 +10,14 @@
+--- labyrinth-2.c	2024-11-22 23:28:22.526426102 +0300
++++ labyrinth-3.c	2024-11-22 23:30:07.296406462 +0300
+@@ -10,14 +10,14 @@
  #define DOWN 4
  
  int main(int argc, char **argv) {
--    const char wallChar = '#', spaceChar = '.';
--    const int size = 6;
+-    if (argc != 3 || strlen(argv[1]) != 2) {
+-        printf("Please pass string of 2 characters (space and wall) and number (size of labyrinth)\n");
 +    if (argc != 4 || strlen(argv[2]) != 2) {
 +        printf("Please pass number (init value of random generator), string of 2 characters (space and wall) and number (size of labyrinth)\n");
-+        return 1;
-+    }
+         return 1;
+     }
+-    const char wallChar = argv[1][0], spaceChar = argv[1][1];
+-    const int size = atoi(argv[2]);
 +    const char wallChar = argv[2][0], spaceChar = argv[2][1];
 +    const int size = atoi(argv[3]);
  
