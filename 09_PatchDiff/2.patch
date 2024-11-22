@@ -1,0 +1,25 @@
+--- labyrinth.c	2024-11-22 22:57:48.586746810 +0300
++++ labyrinth-new.c	2024-11-22 23:09:25.026623249 +0300
+@@ -2,6 +2,7 @@
+ #include <stdlib.h>
+ #include <stdbool.h>
+ #include <stdio.h>
++#include <string.h>
+ 
+ #define LEFT 1
+ #define RIGHT 2
+@@ -9,8 +10,12 @@
+ #define DOWN 4
+ 
+ int main(int argc, char **argv) {
+-    const char wallChar = '#', spaceChar = '.';
+-    const int size = 6;
++    if (argc != 3 || strlen(argv[1]) != 2) {
++        printf("Please pass string of 2 characters (space and wall) and number (size of labyrinth)\n");
++        return 1;
++    }
++    const char wallChar = argv[1][0], spaceChar = argv[1][1];
++    const int size = atoi(argv[2]);
+ 
+     srand(time(NULL));
+ 

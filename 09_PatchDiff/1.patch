@@ -1,0 +1,15 @@
+--- labyrinth.c	2024-11-22 22:57:48.586746810 +0300
++++ labyrinth-new.c	2024-11-22 23:02:02.496699053 +0300
+@@ -10,7 +10,11 @@
+ 
+ int main(int argc, char **argv) {
+     const char wallChar = '#', spaceChar = '.';
+-    const int size = 6;
++    if (argc != 2) {
++        printf("Please pass number - size of labyrinth\n");
++        return 1;
++    }
++    const int size = atoi(argv[1]);
+ 
+     srand(time(NULL));
+ 
