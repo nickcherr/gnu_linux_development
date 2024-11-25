@@ -1,7 +1,8 @@
+CFLAGS = -std=c99 -Wall -Wextra
 if COND_GCOV
-CFLAGS = -std=c99 -Wall -Wextra -O0 -g -fprofile-arcs -ftest-coverage
+CFLAGS += -O0 -g -fprofile-arcs -ftest-coverage
 else
-CFLAGS = -std=c99 -Wall -Wextra -O3 -g3
+CFLAGS +=  -O3 -g3
 endif
 
 libbuf.c:	buf.h
