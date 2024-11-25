@@ -2,8 +2,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-void *
-buf_grow1(void *, size_t, ptrdiff_t);
+void * buf_grow1(void *, size_t, ptrdiff_t);
 
 #ifndef BUF_INIT_CAPACITY
 #  define BUF_INIT_CAPACITY 8

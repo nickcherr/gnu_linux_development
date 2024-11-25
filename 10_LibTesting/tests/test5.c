@@ -1,7 +1,6 @@
 #include "test.h"
 
-int
-main(int argc, char **argv) {
+int main(int argc, char **argv) {
     long *ai = 0;
     for (int i = 0; i < 10000; i++)
         buf_push(ai, i);
@@ -13,5 +12,3 @@ main(int argc, char **argv) {
     buf_free(ai);
     return 0;
 }
-
-

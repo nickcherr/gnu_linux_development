@@ -1,7 +1,6 @@
 #include "test.h"
 
-int
-main(int argc, char **argv) {
+int main(int argc, char **argv) {
     float *a = 0;
     TEST("capacity init", buf_capacity(a) == 0);
     TEST("size init", buf_size(a) == 0);
@@ -15,5 +14,3 @@ main(int argc, char **argv) {
     TEST("free", a == 0);
     return 0;
 }
-
-

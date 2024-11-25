@@ -1,7 +1,6 @@
 #include "test.h"
 
-int
-main(int argc, char **argv) {
+int main(int argc, char **argv) {
     float *a = 0;
     buf_push(a, 1.1);
     buf_push(a, 1.2);
@@ -18,5 +17,3 @@ main(int argc, char **argv) {
     buf_free(a);
     return 0;
 }
-
-

@@ -9,4 +9,4 @@ lib_LTLIBRARIES = libbuf.la
 libbuf.c:	buf.h
 
 gcov:
-		gcov -o .libs libbuf -t -k -b | egrep -v '[[:digit:]]:[ /][*]'
+	gcov -o .libs libbuf -b -t -k | egrep -v '[[:digit:]]:[ /][*]'

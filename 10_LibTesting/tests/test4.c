@@ -1,9 +1,6 @@
-
-
 #include "test.h"
 
-int
-main(int argc, char **argv) {
+int main(int argc, char **argv) {
     long *ai = 0;
     buf_grow(ai, 1000);
     TEST("grow 1000", buf_capacity(ai) == 1000);
@@ -13,5 +10,3 @@ main(int argc, char **argv) {
     buf_free(ai);
     return 0;
 }
-
-
