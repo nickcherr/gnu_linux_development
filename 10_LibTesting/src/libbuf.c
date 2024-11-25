@@ -1,6 +1,6 @@
 #include "buf.h"
 
-void *buf_grow1(void *v, size_t esize, ptrdiff_t n) {
+void * buf_grow1(void *v, size_t esize, ptrdiff_t n) {
     struct buf *p;
     size_t max = (size_t)-1 - sizeof(struct buf);
     if (v) {
@@ -23,7 +23,7 @@ void *buf_grow1(void *v, size_t esize, ptrdiff_t n) {
         p->size = 0;
     }
     return p->buffer;
-fail:
+    fail:
     BUF_ABORT;
     return 0;
 }
