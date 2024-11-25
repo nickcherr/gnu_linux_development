@@ -1,2 +1,2 @@
-cd 10_LibTesting
+cd 10_LibTesting  
 sh make.sh
