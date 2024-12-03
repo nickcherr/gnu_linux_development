@@ -2,13 +2,13 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([guess], [1.0], [email@email.com], [guess])
+AC_INIT([Guessing], [1.0], [email@email.com], [documentation])
 AM_INIT_AUTOMAKE([foreign])
 
 AC_CONFIG_SRCDIR([guess.c])
 AC_CONFIG_HEADERS([config.h])
 
-DX_INIT_DOXYGEN([guess])
+DX_INIT_DOXYGEN([documentation])
 
 # Checks for programs.
 AC_PROG_CC
