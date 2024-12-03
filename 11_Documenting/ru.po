@@ -18,72 +18,72 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: guess.c:35
+#: guess.c:65
 #, c-format
 msgid "Too many arguments\n"
 msgstr "Слишком много аргументов\n"
 
-#: guess.c:41
+#: guess.c:71
 msgid "-r"
 msgstr "-р"
 
-#: guess.c:43
+#: guess.c:73
 msgid "--help"
 msgstr "--помощь"
 
-#: guess.c:43
+#: guess.c:73
 msgid "-h"
 msgstr "-п"
 
-#: guess.c:44
+#: guess.c:74
 #, c-format
 msgid "Usage:\n-h, --help shows this help message\n-r make program work with roman numbers\n"
 msgstr "Использование:\n-п, --помощь выводят это сообщение\n-р позволяет программе работать с римскими числами\n"
 
-#: guess.c:47
+#: guess.c:77
 #, c-format
 msgid "ERROR: Invalid argument\n"
 msgstr "ОШИБКА: Невалидный аргумент\n"
 
-#: guess.c:55
+#: guess.c:85
 #, c-format
 msgid "imagine a number between 1 and 100\n"
 msgstr "задумайте число от 1 до 100\n"
 
-#: guess.c:56
+#: guess.c:86
 #, c-format
 msgid "please always answer \"yes\" or \"no\"\n"
 msgstr "пожалуйста, всегда отвечайте \"да\" или \"нет\"\n"
 
-#: guess.c:61
+#: guess.c:91
 #, c-format
 msgid "is your number greater than %s?\n"
 msgstr "ваше число больше чем %s?\n"
 
-#: guess.c:63
+#: guess.c:93
 #, c-format
 msgid "is your number greater than %d?\n"
 msgstr "ваше число больше чем %d?\n"
 
-#: guess.c:66
+#: guess.c:96
 msgid "yes"
 msgstr "да"
 
-#: guess.c:68
+#: guess.c:98
 msgid "no"
 msgstr "нет"
 
-#: guess.c:71
+#: guess.c:101
 #, c-format
 msgid "bad input. try again\n"
 msgstr "плохой ввод. попробуйте еще раз\n"
 
-#: guess.c:76
+#: guess.c:106
 #, c-format
 msgid "I guess your number is %s\n"
 msgstr "я предполагаю, что Ваше число - %s\n"
 
-#: guess.c:78
+#: guess.c:108
 #, c-format
 msgid "I guess your number is %d\n"
 msgstr "я предполагаю, что Ваше число - %d\n"

@@ -1,3 +1,15 @@
+/** @mainpage
+*   # Program that guesses user's number.
+*/
+/** @page Program that guesses user's number.
+*   Think of a number between 1 and 100 and answer some questions.
+*   Please answer only yes or no.
+*   
+*   Arguments (not necessary):
+*   -r sets all numbers to roman system
+*   --help, -h shows help message
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
@@ -6,6 +18,9 @@
 
 #define _(STRING) gettext(STRING)
 
+/**
+ * @brief Array of roman numbers between 1 and 100.
+ */
 char *roman_values[100] = {
     "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
     "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
@@ -19,6 +34,12 @@ char *roman_values[100] = {
     "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX", "C"
 };
 
+/**
+ * @brief Finds roman number for integer.
+ *
+ * @param num Integer between 1 and 100.
+ * @return Pointer to string with roman number or empty string if number is out of [1, 100].
+ */
 char *int_to_roman(int num) {
     if (num < 1 || num > 100) {
         return "";
@@ -26,6 +47,15 @@ char *int_to_roman(int num) {
     return roman_values[num - 1];
 }
 
+/**
+ * @brief Main function.
+ *
+ * This function asks user questions and finds right number with binary search algorithm.
+ *
+ * @param argc Number of command line arguments.
+ * @param argv Array of command line arguments.
+ * @return Code: 0 if successfully executed, 1 if error.
+ */
 int main(int argc, char **argv) {
     setlocale(LC_ALL, "");
 	bindtextdomain("guess", ".");
