@@ -19,3 +19,6 @@ messages.pot:	guess.pot guess.c
 	xgettext -k_ -c guess.c -o messages.new.pot
 	cp guess.pot messages.pot
 	msgmerge -U messages.pot messages.new.pot
+
+gitclean:
+	git clean -df
